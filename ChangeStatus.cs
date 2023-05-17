@@ -9,7 +9,7 @@ public static class ChangeStatus
     {
         if (selectFilm.Fkstatus == 2)
         {
-            new DBFilmsContext().Movies.First(a => a.Idmovie == selectFilm.Idmovie).Fkstatus = 1;
+            new DBFilmsContext().Movies.First(a => a.Idmovie == selectFilm.Idmovie).Fkstatus = 1;//Заполнение таблицы
             new DBFilmsContext().SaveChanges();   
         }
         return new DBFilmsContext().Movies.ToList();
